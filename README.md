@@ -1,6 +1,4 @@
-# HackForGood
-
-## creative commons
+# HackForGood -## creative commons
 
 # Attribution-NonCommercial 4.0 International
 
