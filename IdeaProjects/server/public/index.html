@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ************************* Declaration of styleSheets *******************************-->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./chosenSelect/chosen.min.css">
+    <link rel="stylesheet" href="./css/jquery.qtip.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+</head>
+
+<body>
+<!-- FIRST row -->
+<!-- Google map -->
+<div class="row">
+    <!-- Full div so the map is up there  -->
+    <div class="col-md-12">
+        <div id="googleMap" class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12698.017302765014!2d-5.924386855443038!3d37.28317952472348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12705c945f7355%3A0x1f6735c306757c59!2sDos+Hermanas%2C+Sevilla%2C+Espa%C3%B1a!5e0!3m2!1ses!2s!4v1387797719272" width="300" height="150" frameborder="0" style="border:0">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="btn-group buttons-options">
+        <button type="button" class="glyphicon glyphicon-trash btn glyphicon limpiar background-color"></button>
+
+
+
+
+        <button type="button" class="glyphicon glyphicon-th-list btn glyphicon  lista background-color"></button>
+
+
+        <button type="button" class="glyphicon glyphicon glyphicon-map-marker btn glyphicon opendata background-color"></button>
+
+    </div>
+
+
+
+
+</div>
+
+
+<!-- Second form "CREATE MESSAGE"  -->
+<div class="col-md-6">
+    <h3>Create Message</h3>
+
+    <form class="form-horizontal" role="form" action="/api/putMsg" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <fieldset>
+                <!-- Field Username  -->
+                <label class="control-label col-sm-2" for="userName">UserName:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="userName" name="userName" placeholder="..." >
+                </div>
+                <!-- Field GeoID  -->
+                <label class="control-label col-sm-2" for="geoID">GeoID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="geoID" name="geoID" placeholder="..." >
+                </div>
+                <!-- Field Content  -->
+                <label class="control-label col-sm-2" for="msg">Content:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="msg" name="msg" placeholder="..." >
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" class="btn btn-default" value="Create Message" />
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <!-- End SECOND Form  -->
+</div>
+<!-- End DIV SECOND Form  -->
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Create Geofence</h4>
+            </div>
+
+
+            <div class="modal-body">
+                <!-- First form "CREATE GEO FENCE"  -->
+                <form class="form-horizontal" id="createGeofenceForm" role="form" method="post" action="javascript:;" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <fieldset>
+                            <!-- Field name  -->
+                            <label class="control-label col-sm-2" for="name">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="..." required>
+                            </div>
+                            <!-- Field Latitude  -->
+                            <label class="control-label col-sm-2" for="latitude">Latitude:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="latitude" name="latitude" placeholder="..." required>
+                            </div>
+                            <!-- Field Longitude  -->
+                            <label class="control-label col-sm-2" for="longitude">Longitude:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="longitude" name="longitude" placeholder="..." required>
+                            </div>
+                            <!-- Field Radius  -->
+                            <label class="control-label col-sm-2" for="radius">Radius:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="radius" name="radius" placeholder="..." required>
+                            </div>
+                            <label class="control-label col-sm-2" for="radius">Tag:</label>
+                            <div class="col-sm-10">
+                                <select class="chosen simple-select seleccionado"  data-placeholder="Select Your tag brother">
+                                    <option value="1">Recogida de alimentos</option>
+                                    <option value="2" selected>Ayuda social</option>
+                                    <option value="3" >Comedores sociales</option>
+                                    <option value="4" >Recogida de juguetes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="col-sm-offset-12 form-group">
+                                <div class="pull-right m-r-5">
+                                    <input type="submit" class="btn btn-default bntSubmit" value="Create Geofence"/>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+                <!-- End FIRST Form  -->
+            </div>
+            <div class="modal-footer">
+                <button id="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- END CONTENT  -->
+</div>
+</body>
+<!-- ************************* Declaration of scripts libraries at the end so is less heavy for the browser ************************ -->
+<!-- Behaviour libraries -->
+<script src="./js/jquery-2.2.0.min.js"></script>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/map.js"></script>
+<script src="./chosenSelect/chosen.jquery.min.js"></script>
+
+<script src="./js/jquery.qtip.min.js"></script>
+
+
+<!-- Google maps libraries -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>google.maps.event.addDomListener(window, 'load', initialize);</script>
+</html>

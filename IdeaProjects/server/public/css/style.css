@@ -1,0 +1,52 @@
+.google-maps {
+    position: relative;
+    padding-bottom: 35%; // This is the aspect ratio
+height: 0;
+    overflow: auto;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.m-r-5{
+    margin-right: 5%;
+}
+input {
+    margin-bottom: 10px;
+    autocomplete: "off";
+}
+.display-none{
+    display: none;
+}
+.background-color{
+    border-color: transparent;
+    background-color: white;
+}
+.buttons-options{
+    z-index: 999999;
+    float: right;
+    margin-right: 5%;
+    margin-top: -33.5%;
+}
+.glyphicon {
+    font-size: 15px;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.tooltipOpenData{
+    display: inline;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.margin-left-40{
+    margin-left: 40%;
+}
+.margin-left-15{
+    margin-left: 17%;
+}

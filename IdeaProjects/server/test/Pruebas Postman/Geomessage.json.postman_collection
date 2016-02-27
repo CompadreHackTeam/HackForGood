@@ -1,0 +1,197 @@
+{
+	"id": "bde04333-748b-1104-b963-4b3d9acde132",
+	"name": "Geomessage",
+	"description": "",
+	"order": [
+		"48773f11-5674-b268-bc7d-c59945940b27",
+		"572f0ff9-13c8-5d22-2adf-d9da0f7ca800",
+		"9d4c845a-9d24-aaaf-8ad2-152c6719e891",
+		"9db6d1e5-90fb-5066-4084-92db36a7bfc4"
+	],
+	"folders": [],
+	"timestamp": 1456227056494,
+	"owner": "",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "48773f11-5674-b268-bc7d-c59945940b27",
+			"headers": "",
+			"url": "http://localhost:8585/api/upload",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "latitude",
+					"value": "39.474677",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "longitude",
+					"value": "-6.371876",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "radius",
+					"value": "4",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "Ayuntamiento de Cáceres",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1456227503301,
+			"name": "Post",
+			"description": "guardar en la bd una nueva geofence\n",
+			"collectionId": "bde04333-748b-1104-b963-4b3d9acde132",
+			"responses": []
+		},
+		{
+			"id": "572f0ff9-13c8-5d22-2adf-d9da0f7ca800",
+			"headers": "",
+			"url": "http://localhost:8585/api/upload",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "bde04333-748b-1104-b963-4b3d9acde132",
+			"data": [
+				{
+					"key": "latitude",
+					"value": "39.479367",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "longitude",
+					"value": "6.3425695",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "radius",
+					"value": "4",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "Casa Ricardo, las mejores migas de Cáceres",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Post",
+			"description": "guardar en la bd una nueva geofence\n",
+			"descriptionFormat": "html",
+			"time": 1456227419416,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9d4c845a-9d24-aaaf-8ad2-152c6719e891",
+			"headers": "",
+			"url": "http://localhost:8585/api/upload",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "bde04333-748b-1104-b963-4b3d9acde132",
+			"data": [
+				{
+					"key": "latitude",
+					"value": "39.474677",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "longitude",
+					"value": "-6.371876",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "radius",
+					"value": "4",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "Ayuntamiento de Cáceres",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Post",
+			"description": "guardar en la bd una nueva geofence\n",
+			"descriptionFormat": "html",
+			"time": 1456227513213,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9db6d1e5-90fb-5066-4084-92db36a7bfc4",
+			"headers": "",
+			"url": "http://localhost:8585/api/upload",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "bde04333-748b-1104-b963-4b3d9acde132",
+			"data": [
+				{
+					"key": "latitude",
+					"value": "39.469136",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "longitude",
+					"value": "-6.378930",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "radius",
+					"value": "4",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "Paseo de Canovas",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Post",
+			"description": "guardar en la bd una nueva geofence\n",
+			"descriptionFormat": "html",
+			"time": 1456227640134,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
